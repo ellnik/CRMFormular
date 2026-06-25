@@ -30,6 +30,7 @@ Anschließend wird die Bean in der Session abgelegt und von der JSP ausgelesen u
 
 **Projektstruktur**
 
+```text
 CRMFormular
 │
 ├── src/main/java
@@ -44,6 +45,7 @@ CRMFormular
 └── src/main/webapp
     ├── ExampleFormular.jsp
     └── index.jsp
+```
 
 **Programmablauf**
 
