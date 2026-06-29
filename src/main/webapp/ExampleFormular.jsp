@@ -10,13 +10,43 @@
 <head>
 <meta charset="UTF-8">
 <title>Example Formular</title>
+
+<script>
+function validateForm() {
+
+    let vorname = document.forms["personForm"]["vorname"].value.trim();
+    let nachname = document.forms["personForm"]["nachname"].value.trim();
+    let alter = document.forms["personForm"]["alter"].value;
+
+    if (vorname === "") {
+        alert("Bitte geben Sie einen Vornamen ein.");
+        return false;
+    }
+
+    if (nachname === "") {
+        alert("Bitte geben Sie einen Nachnamen ein.");
+        return false;
+    }
+
+    if (alter === "" || alter <= 0) {
+        alert("Bitte geben Sie ein gültiges Alter ein.");
+        return false;
+    }
+
+    return true;
+}
+</script>
+
 </head>
 
 <body>
 
 <h2>Person eingeben</h2>
 
-<form action="index" method="post">
+<form name="personForm"
+      action="index"
+      method="post"
+      onsubmit="return validateForm()">
 
 Vorname:
 <input type="text" name="vorname">
