@@ -11,6 +11,8 @@ Nach dem Absenden werden die Daten vom Servlet verarbeitet.
 Der DataManager erstellt eine JavaBean, welche die eingegebenen Informationen speichert. 
 Anschließend wird die Bean in der Session abgelegt und von der JSP ausgelesen und angezeigt.
 
+Zusätzlich werden die eingegebenen Daten mit einem DateiService dauerhaft in einer Textdatei (personen.txt) auf dem lokalen Computer gespeichert. Dadurch bleiben die Daten auch nach dem Neustart der Anwendung erhalten.
+
 **Funktionen**
 
 - [x] Erstellung einer JSP mit einem HTML-Formular
@@ -19,6 +21,8 @@ Anschließend wird die Bean in der Session abgelegt und von der JSP ausgelesen u
 - [x] Nutzung eines DataManagers zur Erstellung der Bean
 - [x] Speicherung der Bean in der Session
 - [x] Anzeige der eingegebenen Daten auf der JSP-Seite
+- [x] Formularvalidierung mit JavaScript
+- [x] Dauerhafte Speicherung der Daten in einer Textdatei (personen.txt) auf dem lokalen Computer
 
 **Verwendete Technologien**
 
@@ -27,6 +31,8 @@ Anschließend wird die Bean in der Session abgelegt und von der JSP ausgelesen u
 - Jakarta Servlet
 - Apache Tomcat 11
 - Eclipse IDE
+- FileWriter
+- BufferedWriter
 
 **Projektstruktur**
 
@@ -57,12 +63,13 @@ CRMFormular
 6. Die Bean wird in der Session gespeichert.
 7. Die JSP liest die Bean aus der Session.
 8. Die gespeicherten Daten werden auf der Webseite angezeigt.
+9. Die JSP liest die Bean aus der Session.
+10. Die gespeicherten Daten werden auf der Webseite angezeigt.
 
 **Projektziel**
 
-Dieses Projekt dient als Übung für die Arbeit mit JSP, Servlets und JavaBeans. 
-Es zeigt den Datenaustausch zwischen den einzelnen Komponenten einer Java-Webanwendung 
-und die Verwendung einer Session zur Speicherung von Benutzerdaten.
+Dieses Projekt dient als Übung für die Arbeit mit JSP, Servlets und JavaBeans. Es zeigt den Datenaustausch zwischen den einzelnen Komponenten einer Java-Webanwendung, die Verwendung einer Session zur Speicherung von Benutzerdaten sowie die dauerhafte Speicherung der Daten in einer Textdatei auf dem lokalen Computer.
 
 
 result:https://github.com/ellnik/CRMFormular/blob/main/crmformular.png
+result:https://github.com/ellnik/CRMFormular/blob/main/crmdokument.png
