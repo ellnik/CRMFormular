@@ -9,7 +9,34 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Example Formular</title>
+<title>CRM Formular</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:40px;
+}
+
+label{
+    display:inline-block;
+    width:100px;
+    margin-bottom:12px;
+    font-weight:bold;
+}
+
+input[type=text],
+input[type=number]{
+    width:220px;
+    padding:5px;
+}
+
+input[type=submit]{
+    margin-left:104px;
+    padding:6px 14px;
+}
+
+</style>
 
 <script>
 function validateForm() {
@@ -48,17 +75,17 @@ function validateForm() {
       method="post"
       onsubmit="return validateForm()">
 
-Vorname:
+<label>Vorname:</label>
 <input type="text" name="vorname">
 
-<br><br>
+<br>
 
-Nachname:
+<label>Nachname:</label>
 <input type="text" name="nachname">
 
-<br><br>
+<br>
 
-Alter:
+<label>Alter:</label>
 <input type="number" name="alter">
 
 <br><br>
@@ -78,11 +105,11 @@ if(person != null){
 
 <h3>Gespeicherte Daten</h3>
 
-<p>Vorname: <%= person.getVorname() %></p>
+<p><b>Vorname:</b> <%= person.getVorname() %></p>
 
-<p>Nachname: <%= person.getNachname() %></p>
+<p><b>Nachname:</b> <%= person.getNachname() %></p>
 
-<p>Alter: <%= person.getAlter() %></p>
+<p><b>Alter:</b> <%= person.getAlter() %></p>
 
 <%
 }
