@@ -11,6 +11,8 @@ Nach dem Absenden werden die Daten vom Servlet verarbeitet.
 Der DataManager erstellt eine JavaBean, welche die eingegebenen Informationen speichert. 
 Anschließend wird die Bean in der Session abgelegt und von der JSP ausgelesen und angezeigt.
 
+Zusätzlich werden die eingegebenen Daten mit einem DateiService dauerhaft in einer Textdatei (personen.txt) auf dem lokalen Computer gespeichert. Dadurch bleiben die Daten auch nach dem Neustart der Anwendung erhalten.
+
 **Funktionen**
 
 - [x] Erstellung einer JSP mit einem HTML-Formular
