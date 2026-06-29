@@ -2,6 +2,8 @@ package servlet;
 
 import java.io.IOException;
 
+import service.DateiService;
+
 import bean.ExampleFormularBean;
 import manager.ExampleFormularDataManager;
 
@@ -29,6 +31,9 @@ public class IndexServlet extends HttpServlet {
                 manager.getBean(vorname, nachname, alter);
 
         request.getSession().setAttribute("person", bean);
+        
+        DateiService dateiService = new DateiService();
+        dateiService.speichern(bean);
 
         response.sendRedirect("ExampleFormular.jsp");
     }
