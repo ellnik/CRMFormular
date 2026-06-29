@@ -72,3 +72,4 @@ Dieses Projekt dient als Übung für die Arbeit mit JSP, Servlets und JavaBeans.
 
 
 result:https://github.com/ellnik/CRMFormular/blob/main/crmformular.png
+result:https://github.com/ellnik/CRMFormular/blob/main/crmdokument.png
